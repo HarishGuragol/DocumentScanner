@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "748614231106",
+    "project_id": "documentscanner-1c2d1",
+    "storage_bucket": "documentscanner-1c2d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748614231106:android:45ed225e7161b30ce9b9db",
+        "android_client_info": {
+          "package_name": "com.example.documentscan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748614231106-8drdadpunlhhasbfbl7f7djpdq78g92i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.documentscan",
+            "certificate_hash": "47fcd940795e2b3fcb3f2cea2906b3d79fa15909"
+          }
+        },
+        {
+          "client_id": "748614231106-rsssrkk13fehs7uuvpmqhmot605liltu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Za1JxSZd8CBVSenjD-uw8v_llA-s3xY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748614231106-rsssrkk13fehs7uuvpmqhmot605liltu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
