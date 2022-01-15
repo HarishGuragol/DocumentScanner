@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
-
+import 'dart:io';
+import 'package:documentscan/screens/file_viewer.dart';
 import 'package:flutter/material.dart';
+import 'package:documentscan/libraries/image_picker_type.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -8,6 +10,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController textFieldController = TextEditingController();
+
+  File? _image;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,9 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.arrow_back_ios,
                 color: Colors.black,
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: () {},
             ),
           ),
           elevation: 0.0,
@@ -39,12 +42,28 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               IconButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => Login(),
-                  //   ),
-                  // );
+                  showModalBottomSheet<void>(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SafeArea(
+                          child: ImagePickerHelper(
+                            // isSave: true,  //if you want to save image in directory
+                            size: Size(900, 600),
+                            onDone: (file) {
+                              if (file == null) {
+                                print(null);
+                              } else {
+                                setState(() {
+                                  _image = file;
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => FileViewer(_image)));
+                                });
+                              }
+                            },
+                          ),
+                        );
+
+                        /// If you dont want to safe area you can remove it
+                      });
                 },
                 icon: Icon(
                   Icons.add_circle_outline_rounded,
@@ -66,3 +85,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+

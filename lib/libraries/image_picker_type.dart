@@ -33,7 +33,8 @@ class ImagePickerHelper extends StatelessWidget {
               });
             },
           ),
-          new ListTile(
+          // ignore: unnecessary_new
+          ListTile(
             title: new Text('Camera'),
             onTap: () async {
               getCroppedImage(ImagePickerType.CAMERA, size.height, size.width)
@@ -43,8 +44,8 @@ class ImagePickerHelper extends StatelessWidget {
               });
             },
           ),
-          new ListTile(
-            title: new Text('Cancel', style: new TextStyle(color: Colors.red)),
+          ListTile(
+            title: const Text('Cancel', style: TextStyle(color: Colors.red)),
             onTap: () {
               Navigator.pop(context);
               onDone(null);
