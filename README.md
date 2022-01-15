@@ -1,4 +1,4 @@
-# documentscan
+# Document Scanner App
 
 A new Flutter project.
 
