@@ -23,14 +23,19 @@ class IntroScreen_1 extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 28.0, right: 230.0),
                       child: Icon(Icons.arrow_back_ios),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 38.0),
-                      child: Text(
-                        "Skip",
-                        style: TextStyle(
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, Routes.register);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 38.0),
+                        child: Text(
+                          "Skip",
+                          style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey),
+                        ),
                       ),
                     ),
                   ],
