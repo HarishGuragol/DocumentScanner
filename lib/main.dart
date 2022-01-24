@@ -8,8 +8,13 @@ import 'package:documentscan/screens/Introscreen_2.dart';
 import 'package:documentscan/screens/Introscreen_3.dart';
 import 'package:documentscan/screens/register.dart';
 import 'package:documentscan/screens/login.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(Scan());
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(Scan());
+}
 
 class Scan extends StatelessWidget {
   @override
