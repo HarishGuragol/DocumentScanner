@@ -1,3 +1,5 @@
+import 'package:documentscan/screens/apistatus.dart';
+import 'package:documentscan/screens/display.dart';
 import 'package:documentscan/screens/homescreen.dart';
 import 'package:documentscan/screens/routes.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,7 @@ import 'package:documentscan/screens/register.dart';
 import 'package:documentscan/screens/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(Scan());
@@ -25,17 +27,18 @@ class Scan extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.splashscreen,
-      routes: {
-        Routes.splashscreen: (context) => SplashScreen(),
-        Routes.intro1: (context) => IntroScreen_1(),
-        Routes.intro2: (context) => IntroScreen_2(),
-        Routes.intro3: (context) => IntroScreen_3(),
-        Routes.login: (context) => Login(),
-        // ignore: prefer_const_constructors
-        Routes.register: (context) => Register(),
-        Routes.homescreen: (context) => HomeScreen(),
-      },
+      //initialRoute: Routes.splashscreen,
+      home: DisplayScreen(),
+      // routes: {
+      //   Routes.splashscreen: (context) => SplashScreen(),
+      //   Routes.intro1: (context) => IntroScreen_1(),
+      //   Routes.intro2: (context) => IntroScreen_2(),
+      //   Routes.intro3: (context) => IntroScreen_3(),
+      //   Routes.login: (context) => Login(),
+      //   // ignore: prefer_const_constructors
+      //   Routes.register: (context) => Register(),
+      //   Routes.homescreen: (context) => HomeScreen(),
+      // },
     );
   }
 }

@@ -15,28 +15,50 @@ class _HomeScreenState extends State<HomeScreen> {
   File? _image;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 10),
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 18.0),
-            child: IconButton(
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 18.0),
+          child: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
+        ),
+        elevation: 0.0,
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.blue,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Text('My Documents'),
+            ),
+            IconButton(
               icon: Icon(
-                Icons.arrow_back_ios,
-                color: Colors.black,
+                Icons.more_vert,
+                color: Colors.white,
               ),
               onPressed: () {},
             ),
-          ),
-          elevation: 0.0,
-          foregroundColor: Colors.black,
-          backgroundColor: Colors.white,
-          title: Text('My Documents'),
-          centerTitle: true,
+          ],
         ),
-        body: Center(
+        centerTitle: true,
+      ),
+      body: Container(
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(50.0),
+            topRight: Radius.circular(50.0),
+          ),
+          color: Colors.white,
+        ),
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -55,7 +77,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               } else {
                                 setState(() {
                                   _image = file;
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => FileViewer(_image)));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              FileViewer(_image)));
                                 });
                               }
                             },
@@ -85,4 +111,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
