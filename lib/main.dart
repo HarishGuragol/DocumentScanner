@@ -1,6 +1,7 @@
 import 'package:documentscan/screens/apistatus.dart';
 import 'package:documentscan/screens/display.dart';
 import 'package:documentscan/screens/homescreen.dart';
+import 'package:documentscan/screens/imageview.dart';
 import 'package:documentscan/screens/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -28,7 +29,7 @@ class Scan extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       //initialRoute: Routes.splashscreen,
-      home: DisplayScreen(),
+      home: ImageView(),
       // routes: {
       //   Routes.splashscreen: (context) => SplashScreen(),
       //   Routes.intro1: (context) => IntroScreen_1(),
