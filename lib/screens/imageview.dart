@@ -6,27 +6,11 @@ class ImageView extends StatefulWidget {
 }
 
 class _ImageViewState extends State<ImageView> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size(100, 80),
-        child: SafeArea(
-          child: Container(
-            height: 70,
-            color: Colors.blue,
-            child: Center(
-                child: const Text(
-              'House Agreement',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold),
-            )),
-          ),
-        ),
-      ),
-      //drawerEnableOpenDragGesture: true,
+      key: _scaffoldKey,
       drawer: Drawer(
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
@@ -39,7 +23,7 @@ class _ImageViewState extends State<ImageView> {
             // ignore: prefer_const_constructors
             Padding(
               padding: const EdgeInsets.only(top: 30.0, bottom: 25.0),
-              child: ListTile(
+              child: const ListTile(
                 title: Center(
                   child: Text(
                     'Categories',
@@ -55,15 +39,15 @@ class _ImageViewState extends State<ImageView> {
               padding:
                   const EdgeInsets.only(top: 13.0, left: 15.0, right: 15.0),
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
+                  style: ElevatedButton.styleFrom(
                   primary: Colors.red[600],
                   onPrimary: Colors.white,
-                  minimumSize: Size(100, 50),
+                  minimumSize: const Size(100, 50),
                 ),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/');
                 },
-                child: Text(
+                child: const Text(
                   'extension',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
@@ -77,12 +61,12 @@ class _ImageViewState extends State<ImageView> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.orange[600],
                   onPrimary: Colors.white,
-                  minimumSize: Size(100, 50),
+                  minimumSize: const Size(100, 50),
                 ),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/');
                 },
-                child: Text(
+                child: const Text(
                   'hint',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
@@ -95,12 +79,12 @@ class _ImageViewState extends State<ImageView> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green[600],
                   onPrimary: Colors.white,
-                  minimumSize: Size(100, 50),
+                  minimumSize: const Size(100, 50),
                 ),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/');
                 },
-                child: Text(
+                child: const Text(
                   'revocation',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
@@ -113,12 +97,12 @@ class _ImageViewState extends State<ImageView> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.indigo[500],
                   onPrimary: Colors.white,
-                  minimumSize: Size(100, 50),
+                  minimumSize: const Size(100, 50),
                 ),
                 onPressed: () {
                   //Navigator.pushNamed(context, '/');
                 },
-                child: Text(
+                child: const Text(
                   'termination',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
@@ -127,6 +111,22 @@ class _ImageViewState extends State<ImageView> {
           ],
         ),
       ),
+      appBar: AppBar(
+        title: const Text(
+          "House Agreement",
+          style: TextStyle(
+              color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),
+        ),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
+      ),
+
+      //drawerEnableOpenDragGesture: true,
+
       body: Container(
         margin: EdgeInsets.only(
             left: MediaQuery.of(context).size.width * 0.05,
