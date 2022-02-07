@@ -11,6 +11,7 @@ class _ImageViewState extends State<ImageView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+      drawerEnableOpenDragGesture: true,
       drawer: Drawer(
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
@@ -39,7 +40,7 @@ class _ImageViewState extends State<ImageView> {
               padding:
                   const EdgeInsets.only(top: 13.0, left: 15.0, right: 15.0),
               child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
+                style: ElevatedButton.styleFrom(
                   primary: Colors.red[600],
                   onPrimary: Colors.white,
                   minimumSize: const Size(100, 50),
@@ -123,10 +124,13 @@ class _ImageViewState extends State<ImageView> {
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+        ],
       ),
-
-      //drawerEnableOpenDragGesture: true,
-
       body: Container(
         margin: EdgeInsets.only(
             left: MediaQuery.of(context).size.width * 0.05,

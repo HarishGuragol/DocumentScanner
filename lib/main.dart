@@ -39,6 +39,10 @@ class Scan extends StatelessWidget {
       //   // ignore: prefer_const_constructors
       //   Routes.register: (context) => Register(),
       //   Routes.homescreen: (context) => HomeScreen(),
+      //   Routes.apistatus: (context) => ApiStatus(),
+      //   Routes.fileviewer: (context) => FileViewer(),
+      //   Routes.display: (context) => Display(),
+      //   Routes.imageview: (context) => ImageView(),
       // },
     );
   }
