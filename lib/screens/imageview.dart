@@ -140,6 +140,34 @@ class _ImageViewState extends State<ImageView> {
           fit: BoxFit.cover,
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.blue,
+        elevation: 0.0,
+        iconSize: 25.0,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.share,
+              color: Colors.white,
+            ),
+            label: 'Share', 
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+              color: Colors.white,
+            ),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.more,
+              color: Colors.white,
+            ),
+            label: 'More',
+          ),
+        ],
+      ),
     );
   }
 }
