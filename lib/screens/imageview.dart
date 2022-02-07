@@ -13,6 +13,7 @@ class _ImageViewState extends State<ImageView> {
       key: _scaffoldKey,
       drawerEnableOpenDragGesture: true,
       drawer: Drawer(
+        backgroundColor: Colors.blue[100],
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
