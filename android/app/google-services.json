@@ -1,20 +1,21 @@
 {
   "project_info": {
-    "project_number": "748614231106",
-    "project_id": "documentscanner-1c2d1",
-    "storage_bucket": "documentscanner-1c2d1.appspot.com"
+    "project_number": "502234747976",
+    "firebase_url": "https://ongoodterms-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ongoodterms",
+    "storage_bucket": "ongoodterms.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:748614231106:android:45ed225e7161b30ce9b9db",
+        "mobilesdk_app_id": "1:502234747976:android:d117be395fc2561262747d",
         "android_client_info": {
           "package_name": "com.example.documentscan"
         }
       },
       "oauth_client": [
         {
-          "client_id": "748614231106-8drdadpunlhhasbfbl7f7djpdq78g92i.apps.googleusercontent.com",
+          "client_id": "502234747976-ajgs122fpauu1slbvqi2p34eeel9u444.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.documentscan",
@@ -22,20 +23,20 @@
           }
         },
         {
-          "client_id": "748614231106-rsssrkk13fehs7uuvpmqhmot605liltu.apps.googleusercontent.com",
+          "client_id": "502234747976-p94opi939nja8g2it0idri59a5eahk4q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC-Za1JxSZd8CBVSenjD-uw8v_llA-s3xY"
+          "current_key": "AIzaSyDzlgs7tv2awEXUJ1ByPjFcbZHo9e4k5Wg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "748614231106-rsssrkk13fehs7uuvpmqhmot605liltu.apps.googleusercontent.com",
+              "client_id": "502234747976-p94opi939nja8g2it0idri59a5eahk4q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
