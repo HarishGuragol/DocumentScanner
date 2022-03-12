@@ -57,7 +57,7 @@ class _RegisterState extends State<Register> {
                       "Hello! \nSignup to get started!",
                       style: TextStyle(
                           fontSize: 28.0,
-                          color: Colors.blue,
+                          color: Color(0XFF4D9CE5),
                           fontFamily: 'Poppins'),
                     ),
                   ),
@@ -189,7 +189,7 @@ class _RegisterState extends State<Register> {
                         print(e);
                       }
                     },
-                    color: Colors.blue,
+                    color: Color(0XFF4D9CE5),
                     child: Text(
                       "Signup",
                       style: TextStyle(color: Colors.white),

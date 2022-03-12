@@ -57,7 +57,7 @@ class _LoginState extends State<Login> {
                       "Hello Again! \nWelcome back",
                       style: TextStyle(
                           fontSize: 30.0,
-                          color: Colors.blue,
+                          color: Color(0XFF4D9CE5),
                           fontFamily: 'Poppins-Bold'),
                     ),
                   ),
@@ -154,7 +154,7 @@ class _LoginState extends State<Login> {
                         showSpinner = false;
                       });
                     },
-                    color: Colors.blue,
+                    color: Color(0XFF4D9CE5),
                     child: Text(
                       "Signin",
                       style: TextStyle(color: Colors.white),

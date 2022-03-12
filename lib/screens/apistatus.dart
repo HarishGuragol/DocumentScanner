@@ -33,7 +33,7 @@ class _ApiTransitionState extends State<ApiTransition> {
               child: const Text(
                 'Analysing the data',
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Color(0XFF4D9CE5),
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -44,7 +44,7 @@ class _ApiTransitionState extends State<ApiTransition> {
               'Fetching info...',
               style: const TextStyle(
                 fontSize: 30,
-                color: Colors.blue,
+                color: Color(0XFF4D9CE5),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -71,7 +71,7 @@ class _ApiTransitionState extends State<ApiTransition> {
                   width: 250,
                   height: 60,
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: Color(0XFF4D9CE5),
                     borderRadius: BorderRadius.all(
                       Radius.circular(30),
                     ),

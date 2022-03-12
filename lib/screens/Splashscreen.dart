@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacementNamed(context, Routes.intro1);
     });
   }
@@ -30,8 +30,8 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Center(
             child: Image(
           image: AssetImage("images/logo.png"),
-          height: 200.0,
-          width: 200.0,
+          height: 180.0,
+          width: 180.0,
         ),
         ),
       ),

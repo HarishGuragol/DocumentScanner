@@ -13,7 +13,7 @@ class _DisplayScreenState extends State<DisplayScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0XFF4D9CE5),
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 18.0),
@@ -27,7 +27,7 @@ class _DisplayScreenState extends State<DisplayScreen> {
         ),
         elevation: 0.0,
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0XFF4D9CE5),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

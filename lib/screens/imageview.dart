@@ -142,30 +142,30 @@ class _ImageViewState extends State<ImageView> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
         elevation: 0.0,
-        iconSize: 25.0,
+        iconSize: 24.0,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.share,
-              color: Colors.white,
-            ),
-            label: 'Share', 
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.white,
-            ),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.more,
-              color: Colors.white,
+              Icons.more_vert,
+              color: Colors.black,
             ),
             label: 'More',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.share,
+              color: Colors.black,
+            ),
+            label: 'Share',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.calendar_today,
+              color: Colors.black,
+            ),
+            label: 'Reminder',
           ),
         ],
       ),

@@ -69,7 +69,7 @@ class ImagePickerHelper extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Cancel', style: TextStyle(color: Colors.red)),
+            title: const Text('Cancel', style: TextStyle(color: Color(0XFF4D9CE5) )),
             onTap: () {
               Navigator.pop(context);
               onDone(null);
@@ -99,12 +99,15 @@ class ImagePickerHelper extends StatelessWidget {
           aspectRatioPresets: [
             CropAspectRatioPreset.square,
           ],
+          // ignore: prefer_const_constructors
           androidUiSettings: AndroidUiSettings(
               toolbarTitle: 'Cropper',
-              toolbarColor: Colors.deepOrange,
+              // ignore: prefer_const_constructors
+              toolbarColor: Color(0XFF4D9CE5),
               toolbarWidgetColor: Colors.white,
               initAspectRatio: CropAspectRatioPreset.original,
               lockAspectRatio: false),
+          // ignore: prefer_const_constructors
           iosUiSettings: IOSUiSettings(
             minimumAspectRatio: 1.0,
           ));

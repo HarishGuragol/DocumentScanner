@@ -21,10 +21,13 @@ class IntroScreen_1 extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 28.0, right: 230.0),
-                      child: Icon(Icons.arrow_back_ios),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.splashscreen);
+                        },
+                        child: Icon(Icons.arrow_back_ios)),
                     ),
                     InkWell(
-                      
                       onTap: () {
                         Navigator.pushNamed(context, Routes.register);
                       },
@@ -35,7 +38,7 @@ class IntroScreen_1 extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 15.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.grey),
+                              color: Colors.grey[800]),
                         ),
                       ),
                     ),
@@ -51,7 +54,7 @@ class IntroScreen_1 extends StatelessWidget {
                 child: Text(
                   "Take a Photo",
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -59,13 +62,13 @@ class IntroScreen_1 extends StatelessWidget {
               flex: 0,
               child: Container(
                 padding: EdgeInsets.only(
-                    top: 10.0, bottom: 100.0, right: 20.0, left: 20.0),
+                    top: 10.0, bottom: 100.0, right: 20.0, left: 23.0),
                 width: double.infinity,
                 child: Text(
                   "Take a photo of each page of your contract.",
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                      fontSize: 15.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey),
                 ),
@@ -78,8 +81,8 @@ class IntroScreen_1 extends StatelessWidget {
                 child: Center(
                   child: Image(
                     image: AssetImage("images/intro1.jpeg"),
-                    height: 300.0,
-                    width: 300.0,
+                    height: 295.0,
+                    width: 295.0,
                   ),
                 ),
               ),
@@ -95,25 +98,26 @@ class IntroScreen_1 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Padding(
-                          padding: const EdgeInsets.only(left: 38.0),
-                          child: ProgressBar(),
-                          ),
+                        padding:
+                            const EdgeInsets.only(left: 38.0, bottom: 40.0),
+                        child: ProgressBar(),
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 0.0),
+                      padding: const EdgeInsets.only(bottom: 40.0),
                       child: Container(
-                        height: 50.0,
+                        height: 54.0,
                         // width: 0.0,
                         child: RaisedButton(
                           onPressed: () {
                             Navigator.pushNamed(context, Routes.intro2);
                           },
                           child: Text("Next"),
-                          color: Colors.blue,
+                          color: Color(0XFF4D9CE5),
                           textColor: Colors.white,
                           shape: CircleBorder(
                             side: BorderSide(
-                              color: Colors.blue,
+                              color: Color(0XFF4D9CE5),
                               width: 2.0,
                             ),
                           ),

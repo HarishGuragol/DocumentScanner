@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0XFF4D9CE5),
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 18.0),
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         elevation: 0.0,
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0XFF4D9CE5),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -77,11 +77,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               } else {
                                 setState(() {
                                   _image = file;
-                                  Navigator.pushNamed(context, FileViewer.routeName,
+                                  Navigator.pushNamed(
+                                      context, FileViewer.routeName,
                                       arguments: ScreenArcs(
                                         image: _image,
                                       ));
-                                  
                                 });
                               }
                             },

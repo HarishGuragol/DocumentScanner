@@ -21,7 +21,11 @@ class IntroScreen_2 extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 28.0, right: 230.0),
-                      child: Icon(Icons.arrow_back_ios),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.intro1);
+                        },
+                        child: Icon(Icons.arrow_back_ios)),
                     ),
                     InkWell(
                       onTap: () {
@@ -34,7 +38,7 @@ class IntroScreen_2 extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 15.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.grey),
+                              color: Colors.grey[800]),
                         ),
                       ),
                     ),
@@ -50,7 +54,7 @@ class IntroScreen_2 extends StatelessWidget {
                 child: Text(
                   "Analyse",
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 29.0, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -77,8 +81,8 @@ class IntroScreen_2 extends StatelessWidget {
                 child: Center(
                   child: Image(
                     image: AssetImage("images/intro2.jpeg"),
-                    height: 300.0,
-                    width: 300.0,
+                    height: 295.0,
+                    width: 295.0,
                   ),
                 ),
               ),
@@ -94,26 +98,27 @@ class IntroScreen_2 extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Padding(
-                          padding: const EdgeInsets.only(left: 38.0),
+                          padding:
+                              const EdgeInsets.only(left: 38.0, bottom: 40.0),
                           child: ProgressBar(
                             index: 1,
                           )),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 0.0),
+                      padding: const EdgeInsets.only(bottom: 40.0),
                       child: Container(
-                        height: 50.0,
+                        height: 54.0,
                         // width: 0.0,
                         child: RaisedButton(
                           onPressed: () {
                             Navigator.pushNamed(context, Routes.intro3);
                           },
                           child: Text("Next"),
-                          color: Colors.blue,
+                          color: Color(0XFF4D9CE5),
                           textColor: Colors.white,
                           shape: CircleBorder(
                             side: BorderSide(
-                              color: Colors.blue,
+                              color: Color(0XFF4D9CE5),
                               width: 2.0,
                             ),
                           ),
