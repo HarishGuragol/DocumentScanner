@@ -77,11 +77,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               } else {
                                 setState(() {
                                   _image = file;
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              FileViewer(_image)));
+                                  Navigator.pushNamed(context, FileViewer.routeName,
+                                      arguments: ScreenArcs(
+                                        image: _image,
+                                      ));
+                                  
                                 });
                               }
                             },

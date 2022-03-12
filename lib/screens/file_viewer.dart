@@ -5,9 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:documentscan/screens/widgets/image_picker_type.dart';
 
 // ignore: use_key_in_widget_constructors, must_be_immutable
+class ScreenArcs{
+  File? image;
+  ScreenArcs({this.image});
+}
 class FileViewer extends StatefulWidget {
-  File? _image;
-  FileViewer(this._image, {Key? key}) : super(key: key);
+ 
+  static const routeName = '/file_viewer';
+  FileViewer({Key? key}) : super(key: key);
 
   @override
   _FileViewerState createState() => _FileViewerState();
@@ -16,6 +21,7 @@ class FileViewer extends StatefulWidget {
 class _FileViewerState extends State<FileViewer> {
   @override
   Widget build(BuildContext context) {
+    ScreenArcs args = ModalRoute.of(context)!.settings.arguments as ScreenArcs;
     return Scaffold(
         appBar: AppBar(
           title: const Text("Preview Image"),
@@ -27,9 +33,9 @@ class _FileViewerState extends State<FileViewer> {
             height: 600.0,
             width: 900.0,
             // ignore: unnecessary_null_comparison
-            child: widget._image == null
+            child: args.image == null
                 ? const Text("Preview Image")
-                : Image.file(widget._image!),
+                : Image.file(args.image!),
           ),
         ));
   }

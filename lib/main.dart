@@ -5,6 +5,8 @@ import 'package:documentscan/screens/imageview.dart';
 import 'package:documentscan/screens/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:documentscan/screens/file_viewer.dart';
+import 'package:documentscan/screens/display.dart';
 import 'package:documentscan/screens/Splashscreen.dart';
 import 'package:documentscan/screens/Introscreen_1.dart';
 import 'package:documentscan/screens/Introscreen_2.dart';
@@ -29,7 +31,7 @@ class Scan extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       //initialRoute: Routes.splashscreen,
-      home: ImageView(),
+      home: DisplayScreen(),
       // routes: {
       //   Routes.splashscreen: (context) => SplashScreen(),
       //   Routes.intro1: (context) => IntroScreen_1(),
@@ -39,9 +41,9 @@ class Scan extends StatelessWidget {
       //   // ignore: prefer_const_constructors
       //   Routes.register: (context) => Register(),
       //   Routes.homescreen: (context) => HomeScreen(),
-      //   Routes.apistatus: (context) => ApiStatus(),
+      //   Routes.apistatus: (context) => ApiTransition(),
       //   Routes.fileviewer: (context) => FileViewer(),
-      //   Routes.display: (context) => Display(),
+      //   Routes.display: (context) => DisplayScreen(),
       //   Routes.imageview: (context) => ImageView(),
       // },
     );

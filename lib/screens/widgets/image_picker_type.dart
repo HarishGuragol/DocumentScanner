@@ -2,6 +2,7 @@ library image_picker_type;
 
 import 'dart:io';
 
+import 'package:documentscan/screens/apistatus.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -42,6 +43,29 @@ class ImagePickerHelper extends StatelessWidget {
                 Navigator.pop(context);
                 onDone(img!);
               });
+            },
+          ),
+          ListTile(
+            title: new Text('Text'),
+            onTap: () async {
+              Navigator.pop(context);
+              showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                        title: Text('Text'),
+                        content: TextField(
+                          onChanged: (text) {},
+                        ),
+                        actions: <Widget>[
+                          TextButton(
+                            child: Text('Submit'),
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => ApiTransition()));
+                            },
+                          ),
+                        ],
+                      ));
             },
           ),
           ListTile(
