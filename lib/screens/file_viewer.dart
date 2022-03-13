@@ -31,7 +31,7 @@ class _FileViewerState extends State<FileViewer> {
           child: Container(
             color: Colors.black12,
             height: 600.0,
-            width: 900.0,
+            width: 600.0,
             // ignore: unnecessary_null_comparison
             child: args.image == null
                 ? const Text("Preview Image")

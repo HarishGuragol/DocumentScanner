@@ -6,7 +6,7 @@ import 'package:documentscan/screens/widgets/text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-
+import 'constants/constants.dart';
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
 
@@ -210,8 +210,7 @@ class _RegisterState extends State<Register> {
                       child: Center(
                         child: Text(
                           "Already Have an Account? Signin",
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.bold),
+                          style: bottomtextstyle,
                         ),
                       ),
                     ),

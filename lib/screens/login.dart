@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:documentscan/screens/routes.dart';
 import 'package:documentscan/screens/widgets/painter.dart';
 //import 'package:documentscan/screens/widgets/text_field.dart';
-
+import 'constants/constants.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -175,8 +175,7 @@ class _LoginState extends State<Login> {
                       child: Center(
                         child: Text(
                           "Forgot your Password?  Reset",
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.bold),
+                          style: bottomtextstyle,
                         ),
                       ),
                     ),

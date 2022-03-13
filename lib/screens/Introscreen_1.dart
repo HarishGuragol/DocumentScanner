@@ -4,6 +4,7 @@
 import 'package:documentscan/screens/routes.dart';
 import 'package:documentscan/screens/widgets/progress_bar.dart';
 import 'package:flutter/material.dart';
+import 'constants/constants.dart';
 
 class IntroScreen_1 extends StatelessWidget {
   @override
@@ -35,10 +36,7 @@ class IntroScreen_1 extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 38.0),
                         child: Text(
                           "Skip",
-                          style: TextStyle(
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey[800]),
+                          style: skipTextbutton,
                         ),
                       ),
                     ),
@@ -54,7 +52,7 @@ class IntroScreen_1 extends StatelessWidget {
                 child: Text(
                   "Take a Photo",
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                  style: introtextheader,
                 ),
               ),
             ),
@@ -67,10 +65,7 @@ class IntroScreen_1 extends StatelessWidget {
                 child: Text(
                   "Take a photo of each page of your contract.",
                   textAlign: TextAlign.left,
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey),
+                  style: introcontentstyle,
                 ),
               ),
             ),
