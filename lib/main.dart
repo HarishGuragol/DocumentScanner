@@ -4,9 +4,9 @@ import 'package:documentscan/screens/homescreen.dart';
 import 'package:documentscan/screens/imageview.dart';
 import 'package:documentscan/screens/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:documentscan/screens/file_viewer.dart';
-import 'package:documentscan/screens/display.dart';
+//import 'package:documentscan/screens/display.dart';
 import 'package:documentscan/screens/Splashscreen.dart';
 import 'package:documentscan/screens/Introscreen_1.dart';
 import 'package:documentscan/screens/Introscreen_2.dart';
@@ -18,15 +18,17 @@ import 'package:firebase_core/firebase_core.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(Scan());
+  runApp(const Scan());
 }
 
 class Scan extends StatelessWidget {
+  const Scan({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: const Color(0XFF4D9CE5),
         backgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
@@ -41,7 +43,7 @@ class Scan extends StatelessWidget {
         // ignore: prefer_const_constructors
         Routes.register: (context) => Register(),
         Routes.homescreen: (context) => HomeScreen(),
-        Routes.apistatus: (context) => ApiTransition(),
+        Routes.apistatus: (context) => const ApiTransition(),
         Routes.fileviewer: (context) => FileViewer(),
         Routes.display: (context) => DisplayScreen(),
         Routes.imageview: (context) => ImageView(),

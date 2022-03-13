@@ -7,6 +7,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'constants/constants.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
 
@@ -55,14 +57,11 @@ class _RegisterState extends State<Register> {
                     padding: const EdgeInsets.only(top: 18.0),
                     child: Text(
                       "Hello! \nSignup to get started!",
-                      style: TextStyle(
-                          fontSize: 28.0,
-                          color: Color(0XFF4D9CE5),
-                          fontFamily: 'Poppins'),
+                      style: registertextstyle,
                     ),
                   ),
                   SizedBox(
-                    height: 100.0,
+                    height: 90.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -78,25 +77,13 @@ class _RegisterState extends State<Register> {
                         ),
                       ],
                     ),
-                    child: TextField(
-                      keyboardType: TextInputType.emailAddress,
-                      textAlign: TextAlign.center,
-                      onChanged: (value) {
-                        //Do something with the user input.
-                        person = value;
-                      },
-                      decoration: InputDecoration(
-                        hintText: "Enter your name",
-                        prefixIcon: Icon(Icons.person),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
+                    child: CustomTextField(
+                      hintText: 'Enter your name',
+                      prefixIcon: Icon(Icons.person),
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 22.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -130,7 +117,7 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 22.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -164,7 +151,7 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 22.0,
                   ),
                   MaterialButton(
                     minWidth: 200.0,
@@ -186,13 +173,22 @@ class _RegisterState extends State<Register> {
                           showSpinner = false;
                         });
                       } catch (e) {
-                        print(e);
+                        Fluttertoast.showToast(
+                            msg: e.toString(), // message
+                            toastLength: Toast.LENGTH_SHORT, // length
+                            gravity: ToastGravity.CENTER,
+                            // location
+                            timeInSecForIosWeb: 5,
+                            //timeInSecForIosWeb: 1,
+                            textColor: Colors.black // duration
+                            );
+                        //print(e);
                       }
                     },
                     color: Color(0XFF4D9CE5),
                     child: Text(
                       "Signup",
-                      style: TextStyle(color: Colors.white),
+                      style: registerbuttonstyle,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),

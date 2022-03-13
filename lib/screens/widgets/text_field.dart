@@ -22,10 +22,11 @@ class CustomTextField extends StatelessWidget {
         ],
       ),
       child: TextField(
+        //keyboardType: TextInputType.emailAddress,
+        textAlign: TextAlign.center,
         decoration: InputDecoration(
           hintText: hintText,
           prefixIcon: prefixIcon,
-          
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20.0),
             borderSide: BorderSide.none,

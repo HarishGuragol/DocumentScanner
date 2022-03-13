@@ -2,6 +2,7 @@
 import 'dart:async';
 import 'package:documentscan/screens/routes.dart';
 import 'package:documentscan/screens/widgets/painter.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 //import 'package:documentscan/screens/widgets/text_field.dart';
 import 'constants/constants.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -52,17 +53,14 @@ class _LoginState extends State<Login> {
               child: ListView(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 18.0, left: 10.0),
+                    padding: const EdgeInsets.only(top: 25.0, left: 10.0),
                     child: Text(
                       "Hello Again! \nWelcome back",
-                      style: TextStyle(
-                          fontSize: 30.0,
-                          color: Color(0XFF4D9CE5),
-                          fontFamily: 'Poppins-Bold'),
+                      style: logintextstyle,
                     ),
                   ),
                   SizedBox(
-                    height: 100.0,
+                    height: 90.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -96,7 +94,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 22.0,
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -130,7 +128,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 22.0,
                   ),
                   MaterialButton(
                     minWidth: 200.0,
@@ -148,7 +146,15 @@ class _LoginState extends State<Login> {
                           Navigator.pushNamed(context, Routes.homescreen);
                         }
                       } catch (e) {
-                        print(e);
+                        Fluttertoast.showToast(
+                            msg: e.toString(), // message
+                            toastLength: Toast.LENGTH_SHORT, // length
+                            gravity: ToastGravity.CENTER, // location
+                            timeInSecForIosWeb: 5,
+                            textColor: Colors.black // duration
+                            );
+
+                        //print(e);
                       }
                       setState(() {
                         showSpinner = false;
@@ -156,8 +162,8 @@ class _LoginState extends State<Login> {
                     },
                     color: Color(0XFF4D9CE5),
                     child: Text(
-                      "Signin",
-                      style: TextStyle(color: Colors.white),
+                      "Sign in",
+                      style: loginbuttonstyle,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
