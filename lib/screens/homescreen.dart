@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'package:documentscan/screens/file_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:documentscan/screens/widgets/image_picker_type.dart';
+import 'package:documentscan/widgets/image_picker_type.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

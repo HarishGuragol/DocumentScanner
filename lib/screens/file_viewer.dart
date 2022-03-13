@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:documentscan/screens/widgets/image_picker_type.dart';
+
+import 'package:documentscan/widgets/image_picker_type.dart';
 
 // ignore: use_key_in_widget_constructors, must_be_immutable
 class ScreenArcs{

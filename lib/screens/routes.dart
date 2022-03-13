@@ -1,6 +1,5 @@
 class Routes {
   static const String splashscreen = '/';
-
   static const String intro1 = '/Introscreen_1';
   static const String intro2 = '/Introscreen_2';
   static const String intro3 = '/Introscreen_3';
@@ -11,7 +10,4 @@ class Routes {
   static const String fileviewer = '/file_viewer';
   static const String imageview = '/imageview';
   static const String display = '/display';
-  static const String myprofile = '/myprofile';
-
-
 }

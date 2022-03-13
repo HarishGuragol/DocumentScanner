@@ -2,9 +2,14 @@
 
 //import 'package:documentscan/main.dart';
 import 'package:documentscan/screens/routes.dart';
-import 'package:documentscan/screens/widgets/progress_bar.dart';
+import 'package:documentscan/widgets/progress_bar.dart';
+
+import 'package:documentscan/constants/constants.dart';
+
+
 import 'package:flutter/material.dart';
-import 'constants/constants.dart';
+
+
 class IntroScreen_2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

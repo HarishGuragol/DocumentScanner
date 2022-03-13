@@ -4,9 +4,7 @@ import 'package:documentscan/screens/homescreen.dart';
 import 'package:documentscan/screens/imageview.dart';
 import 'package:documentscan/screens/routes.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter/services.dart';
 import 'package:documentscan/screens/file_viewer.dart';
-//import 'package:documentscan/screens/display.dart';
 import 'package:documentscan/screens/Splashscreen.dart';
 import 'package:documentscan/screens/Introscreen_1.dart';
 import 'package:documentscan/screens/Introscreen_2.dart';
@@ -40,8 +38,7 @@ class Scan extends StatelessWidget {
         Routes.intro2: (context) => IntroScreen_2(),
         Routes.intro3: (context) => IntroScreen_3(),
         Routes.login: (context) => Login(),
-        // ignore: prefer_const_constructors
-        Routes.register: (context) => Register(),
+        Routes.register: (context) => const Register(),
         Routes.homescreen: (context) => HomeScreen(),
         Routes.apistatus: (context) => const ApiTransition(),
         Routes.fileviewer: (context) => FileViewer(),

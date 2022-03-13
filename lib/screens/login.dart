@@ -1,13 +1,15 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:documentscan/screens/routes.dart';
-import 'package:documentscan/screens/widgets/painter.dart';
+
 import 'package:fluttertoast/fluttertoast.dart';
-//import 'package:documentscan/screens/widgets/text_field.dart';
-import 'constants/constants.dart';
+import 'package:documentscan/widgets/painter.dart';
+
+import 'package:documentscan/constants/constants.dart';
+
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
   @override
