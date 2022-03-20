@@ -10,11 +10,12 @@ import 'package:image_picker/image_picker.dart';
 enum ImagePickerType { GALLERY, CAMERA }
 
 class ImagePickerHelper extends StatelessWidget {
-  const ImagePickerHelper({Key? key, required this.onDone, required this.size})
+  ImagePickerHelper({Key? key, required this.onDone, required this.size})
       : super(key: key);
 
   final Function(File?) onDone;
   final Size size;
+  TextEditingController url=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +55,7 @@ class ImagePickerHelper extends StatelessWidget {
                   builder: (context) => AlertDialog(
                         title: Text('Text'),
                         content: TextField(
+                          controller: url,
                           onChanged: (text) {},
                         ),
                         actions: <Widget>[
@@ -61,7 +63,7 @@ class ImagePickerHelper extends StatelessWidget {
                             child: Text('Submit'),
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => ApiTransition()));
+                                  builder: (context) => ApiTransition(url.text)));
                             },
                           ),
                         ],

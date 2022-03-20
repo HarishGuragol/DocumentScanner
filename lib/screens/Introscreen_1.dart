@@ -25,6 +25,7 @@ class IntroScreen_1 extends StatelessWidget {
                       child: InkWell(
                         onTap: () {
                           Navigator.pushNamed(context, Routes.splashscreen);
+                          print('asdhads');
                         },
                         child: Icon(Icons.arrow_back_ios)),
                     ),

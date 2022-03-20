@@ -1,0 +1,1 @@
+const root='https://extractor.agb.omnisqa.com/';

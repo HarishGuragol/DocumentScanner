@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ApiTransition extends StatefulWidget {
-  const ApiTransition({Key? key}) : super(key: key);
+  String url;
+  
+  ApiTransition(this.url, {Key? key}) : super(key: key);
 
   @override
   _ApiTransitionState createState() => _ApiTransitionState();

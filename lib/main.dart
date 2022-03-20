@@ -3,6 +3,7 @@ import 'package:documentscan/screens/display.dart';
 import 'package:documentscan/screens/homescreen.dart';
 import 'package:documentscan/screens/imageview.dart';
 import 'package:documentscan/screens/routes.dart';
+import 'package:documentscan/viewmodel/homeViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:documentscan/screens/file_viewer.dart';
 import 'package:documentscan/screens/Splashscreen.dart';
@@ -12,6 +13,7 @@ import 'package:documentscan/screens/Introscreen_3.dart';
 import 'package:documentscan/screens/register.dart';
 import 'package:documentscan/screens/login.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +32,12 @@ class Scan extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.splashscreen,
+      home:MultiProvider(
+        providers: [
+          Provider<HomeViewModel>(create: (_)=>HomeViewModel(),)
+        ],
+        child: HomeScreen(),
+      ),
       //home: IntroScreen_3(),
       routes: {
         Routes.splashscreen: (context) => SplashScreen(),
@@ -40,7 +47,6 @@ class Scan extends StatelessWidget {
         Routes.login: (context) => Login(),
         Routes.register: (context) => const Register(),
         Routes.homescreen: (context) => HomeScreen(),
-        Routes.apistatus: (context) => const ApiTransition(),
         Routes.fileviewer: (context) => FileViewer(),
         Routes.display: (context) => DisplayScreen(),
         Routes.imageview: (context) => ImageView(),
