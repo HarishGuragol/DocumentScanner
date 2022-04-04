@@ -10,7 +10,7 @@ class HomeViewModel extends ChangeNotifier {
   List<TextSpan> textSpans=[];
 
   Future<void> processUrl(String url) async {
-    final response = await postRequest('estimator/url?model_name="en2_471"&sgm_name="en_crf"&url=${url}');
+    final response = await postRequest('estimator/url?model_name=en2_471&sgm_name=en_crf&url=${url}');
     print(response.body);
     if (response.statusCode == 200) {
       print(response.body);
