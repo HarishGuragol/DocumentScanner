@@ -18,7 +18,8 @@ import 'package:provider/provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const Scan());
+  runApp(MultiProvider(providers: [ChangeNotifierProvider(create: (context)=>HomeViewModel())],
+  child:Scan() ));
 }
 
 class Scan extends StatelessWidget {
@@ -32,12 +33,8 @@ class Scan extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home:MultiProvider(
-        providers: [
-          Provider<HomeViewModel>(create: (_)=>HomeViewModel(),)
-        ],
-        child: HomeScreen(),
-      ),
+      home:HomeScreen(),
+      
       //home: IntroScreen_3(),
       routes: {
         Routes.splashscreen: (context) => SplashScreen(),

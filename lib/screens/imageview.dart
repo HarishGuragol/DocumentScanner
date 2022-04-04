@@ -1,4 +1,6 @@
+import 'package:documentscan/viewmodel/homeViewModel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ImageView extends StatefulWidget {
   @override
@@ -133,14 +135,13 @@ class _ImageViewState extends State<ImageView> {
         ],
       ),
       body: Container(
-        margin: EdgeInsets.only(
-            left: MediaQuery.of(context).size.width * 0.05,
-            right: MediaQuery.of(context).size.width * 0.05),
-        child: Image.asset(
-          'images/demo.jpg',
-          fit: BoxFit.cover,
-        ),
-      ),
+          margin: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width * 0.05,
+              right: MediaQuery.of(context).size.width * 0.05),
+          child: SingleChildScrollView(
+            child: Text(
+            context.watch<HomeViewModel>().processedText))
+          ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         elevation: 0.0,

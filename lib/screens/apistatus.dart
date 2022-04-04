@@ -1,8 +1,11 @@
+import 'package:documentscan/screens/imageview.dart';
+import 'package:documentscan/viewmodel/homeViewModel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/src/provider.dart';
 
 class ApiTransition extends StatefulWidget {
   String url;
-  
+
   ApiTransition(this.url, {Key? key}) : super(key: key);
 
   @override
@@ -11,7 +14,17 @@ class ApiTransition extends StatefulWidget {
 
 class _ApiTransitionState extends State<ApiTransition> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    
+  }
+
+  @override
   Widget build(BuildContext context) {
+    context.read<HomeViewModel>().processUrl(widget.url).then((value){
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ImageView()));
+    });
     return Scaffold(
       body: Container(
         child: Column(
