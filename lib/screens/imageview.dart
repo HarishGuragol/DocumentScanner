@@ -139,8 +139,14 @@ class _ImageViewState extends State<ImageView> {
               left: MediaQuery.of(context).size.width * 0.05,
               right: MediaQuery.of(context).size.width * 0.05),
           child: SingleChildScrollView(
-            child: Text(
-            context.watch<HomeViewModel>().processedText))
+            child: Text.rich(
+              TextSpan(
+                children: [
+                  ...context.watch<HomeViewModel>().textSpans
+                ]
+              )
+            )
+            )
           ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
