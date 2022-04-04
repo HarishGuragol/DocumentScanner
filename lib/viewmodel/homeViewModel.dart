@@ -25,7 +25,7 @@ class HomeViewModel extends ChangeNotifier {
         else{
           textSpans.add(TextSpan(
             text:data[i]['sentence'],
-            style: TextStyle(color: Colors.green)
+            style: TextStyle(backgroundColor: Colors.green,color: Colors.white)
           ));
         }
       }
